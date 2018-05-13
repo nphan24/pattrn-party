@@ -1,21 +1,9 @@
 $('document').ready(loadTabOne);
 
 function loadTabOne() {
-  $('.tab-1').append(`
-    <img src='http://princespot.com/wp-content/uploads/2014/07/Seth-Casteel-Underwater-puppies02.jpg' />
-    <p>
-      Doggo ipsum such treat extremely cuuuuuute the neighborhood pupper
-      shooberino the neighborhood pupper extremely cuuuuuute, super chub
-      wrinkler very good spot. Snoot smol shoob doggo long water shoob,
-      doing me a frighten bork. Pupperino long water shoob boof, very good
-      spot. borkf tungg. Shoober very good spot pupper porgo, big ol very
-      hand that feed shibe. Thicc tungg bork maximum borkdrive ruff puggo
-      doggo, he made many woofs blop stop it fren dat tungg tho. The
-      neighborhood pupper h*ck corgo pats heckin angery woofer, what a
-      nice floof length boy shooberino. He made many woofs woofer heckin
-      shibe blep heckin angery woofer, floofs snoot the neighborhood
-      pupper porgo.
-    </p>`);
+  $('.tab-info').children('img').attr('src', image['tab-1']);
+  $('.tab-info').children('p').text(text['tab-1']);
+  $('.tab-1').addClass('selected');
 }
 
 const image = {
@@ -43,5 +31,6 @@ const text = {
 $('.tabs').on('click', showTab);
 
 function showTab(event) {
-  console.log('event target', event.target.className)
+  $('.tab-info').children('img').attr('src', image[event.target.className]);
+  $('.tab-info').children('p').text(text[event.target.className]);
 }

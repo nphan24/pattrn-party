@@ -1,10 +1,5 @@
 $('document').ready(loadTabOne);
-
-function loadTabOne() {
-  $('.tab-info').children('img').attr('src', image['tab-1']);
-  $('.tab-info').children('p').text(text['tab-1']);
-  $('.tab-1').addClass('selected');
-}
+$('.tabs').on('click', showTab);
 
 const image = {
   'tab-1':
@@ -28,9 +23,18 @@ const text = {
     'Porgo shooberino what a nice floof thicc shoober heckin angery woofer, shooberino I am bekom fat what a nice floof. Waggy wags smol borking doggo with a long snoot for pats adorable doggo very jealous pupper dat tungg tho clouds very good spot what a nice floof, mlem boof fluffer heckin angery woofer you are doing me the shock heckin. Doggo very hand that feed shibe blop what a nice floof, very taste wow. Wow very biscit sub woofer heckin dat tungg tho, bork. Boof corgo clouds aqua doggo wow very biscit floofs, noodle horse pupper long doggo doggorino. Tungg long bois corgo you are doing me the shock, very taste wow boofers clouds long doggo, many pats porgo. Heckin angery woofer very taste wow pupper porgo floofs, super chub he made many woofs. Big ol boof clouds sub woofer heck, heckin angery woofer doggo fat boi, bork you are doing me the shock woofer.'
 };
 
-$('.tabs').on('click', showTab);
+function loadTabOne() {
+  $('.tab-info').children('img').attr('src', image['tab-1']);
+  $('.tab-info').children('p').text(text['tab-1']);
+  $('.tab-1').addClass('selected');
+};
 
 function showTab(event) {
   $('.tab-info').children('img').attr('src', image[event.target.className]);
   $('.tab-info').children('p').text(text[event.target.className]);
-}
+  $('.tab-1').removeClass('selected');
+  $('.tab-2').removeClass('selected');
+  $('.tab-3').removeClass('selected');
+  $('.tab-4').removeClass('selected');
+  $(event.target).addClass('selected');
+};

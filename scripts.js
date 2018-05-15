@@ -12,6 +12,13 @@ const image = {
     'https://static1.squarespace.com/static/53a096cce4b00d7644776a0b/544d5f5ce4b0b7c1dfbfb70e/544d5fb8e4b048f0ef614dae/1414356922235/Shake+Puppies-1_Mixbreed.jpg'
 };
 
+const title = {
+  'tab-1': 'Porgo clouds borkdrive vvv very jealous pupper borkf',
+  'tab-2': 'Bork big ol woofer',
+  'tab-3': 'Blop very taste wow pupperino',
+  'tab-4': 'Waggy wags wrinkler big ol pupper fluffer, heckin'
+};
+
 const text = {
   'tab-1':
     'Doggo ipsum such treat extremely cuuuuuute the neighborhood pupper shooberino the neighborhood pupper extremely cuuuuuute, super chub wrinkler very good spot. Snoot smol shoob doggo long water shoob, doing me a frighten bork. Pupperino long water shoob boof, very good spot. borkf tungg. Shoober very good spot pupper porgo, big ol very hand that feed shibe. Thicc tungg bork maximum borkdrive ruff puggo doggo, he made many woofs blop stop it fren dat tungg tho. The neighborhood pupper h*ck corgo pats heckin angery woofer, what a nice floof length boy shooberino. He made many woofs woofer heckin shibe blep heckin angery woofer, floofs snoot the neighborhood pupper porgo.',
@@ -25,13 +32,15 @@ const text = {
 
 function loadTabOne() {
   $('.tab-info').children('img').attr('src', image['tab-1']);
-  $('.tab-info').children('p').text(text['tab-1']);
+  $('.contents').children('.text-title').text(title['tab-1']);
+  $('.contents').children('.text').text(text['tab-1']);
   $('.tab-1').addClass('selected');
 };
 
 function showTab(event) {
   $('.tab-info').children('img').attr('src', image[event.target.className]);
-  $('.tab-info').children('p').text(text[event.target.className]);
+  $('.contents').children('.text-title').text(title[event.target.className]);
+  $('.contents').children('.text').text(text[event.target.className]);
   $('.tab-1').removeClass('selected');
   $('.tab-2').removeClass('selected');
   $('.tab-3').removeClass('selected');

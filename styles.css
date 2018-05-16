@@ -129,6 +129,10 @@ img {
   .text {
     font-size: .8em;
   }
+
+  .top-line {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -197,6 +201,11 @@ img {
 
   .tabs div {
     width: 100%;
+    text-align: left;
+    background-image: url('./assets/add.svg');
+    background-repeat: no-repeat;
+    background-position: 300px 15px;
+    background-size: 15px 15px;
   }
 
   .tab-info {
@@ -205,5 +214,9 @@ img {
 
  .tabs div.selected {
   border: 1px solid black;
+  background-image: url('./assets/minus.svg');
+  background-repeat: no-repeat;
+  background-position: 300px 15px;
+  background-size: 15px 15px;
   }
 }

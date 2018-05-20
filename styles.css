@@ -210,6 +210,7 @@ img {
 
   .tab-info {
     border: none;
+    margin-top: 50px;
   }
 
  .tabs div.selected {
@@ -218,5 +219,14 @@ img {
   background-repeat: no-repeat;
   background-position: 300px 15px;
   background-size: 15px 15px;
+  position: absolute;
+  bottom: 515px;
+  border: none;
+  border-top: 1px solid grey;
+  }
+
+  .accordian {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

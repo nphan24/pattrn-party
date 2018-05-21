@@ -232,7 +232,11 @@ img {
     }
 
   h3 {
-    margin-top: 30px;
+    margin-top: 40px;
+  }
+
+  .top-line {
+    margin-bottom: 40px;
   }
 }
 
@@ -254,10 +258,6 @@ img {
   border: 1px solid #D1D2D3;
   height: 220px;
   margin: 10px;
-}
-
-.flex-cards {
-  margin-top: 20%;
 }
 
 .one {
@@ -296,3 +296,139 @@ h4 {
 }
 
 /******************Header Bar******************/
+
+.menu {
+  display: flex;
+  width: 80%;
+  margin: 40px auto 40px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #D1D2D3;
+  font-weight: 300;
+}
+
+.link {
+  margin-top: 38px;
+  font-size: 1.2em;
+}
+
+.header-menu {
+  display: none;
+}
+
+.x-nav {
+  width: 60px;
+  height: 60px;
+  margin-left: 35px;
+  margin-top: 20px;
+  border: 1px solid #F2F2F2;
+  border-radius: 50%;
+}
+
+.search {
+  position: relative;
+  bottom: 5px;
+  margin-right: 30px;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.search::placeholder {
+  background-image: url('./assets/search.svg');
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.last-view {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .link {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .search {
+    margin-right: 20px;
+  }
+
+  .x-nav {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .search {
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  .link {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .menu {
+    display: block;
+  }
+
+  .header-menu {
+    display: inline;
+    vertical-align: middle;
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-right: 20px;
+  }
+
+  .menu {
+    padding: 15px 15px 15px 30px;
+  }
+
+  .x-nav {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .link {
+    font-size: 1.5em;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu {
+    padding-left: 15px;
+  }
+
+  .link {
+    font-size: 1.2em;
+  }
+
+  .search {
+    margin-right: 0;
+    width: 220px;
+  }
+}
+

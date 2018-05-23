@@ -287,19 +287,35 @@ h4 {
   grid-column: 2 / 4;
 }
 
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 700px) {
+  h4 {
+    font-size: .8em;
+  }
+
+  .background-image {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  h4 {
+    font-size: 1em;
+  }
+
+  .background-image {
+    height: 78%;
+  }
+
   .flex-box {
     width: 100%;
     padding: 15px;
   }
-
   .one,
   .four,
   .five,
   .seven {
     display: none;
   }
-
   .grid {
     grid-template-columns: 100%;
     grid-template-rows: 33.5% 33.5% 33.5%;

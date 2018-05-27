@@ -1,5 +1,6 @@
 $('document').ready(loadTabOne);
 $('.tabs').on('click', showTab);
+$('.nav-menu').on('click', showMenu);
 
 const image = {
   'tab-1':
@@ -44,3 +45,8 @@ function showTab(event) {
   $('.tabs div').removeClass('selected');
   $(event.target).addClass('selected');
 };
+
+function showMenu() {
+  $('.menu').toggleClass('height');
+  $('.hide').toggleClass('show');
+}
